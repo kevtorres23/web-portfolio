@@ -1,12 +1,13 @@
 import Image from "next/image";
-import Button from "@/components/Button";
+import LandingHero from "@/ui-sections/LandingHero";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <Button>
-        Descargar mi CV
-      </Button>
+      <Navbar />
+
+      <LandingHero/>
     </div>
   );
 }
