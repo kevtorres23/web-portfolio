@@ -1,3 +1,5 @@
+"use client"
+
 type LinkProps = {
     text: string;
     isActive?: boolean;
