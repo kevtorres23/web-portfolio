@@ -1,8 +1,8 @@
-import LandingHero from "@/app/ui-sections/landing/LandingHero";
+import LandingHero from "@/ui-sections/landing/LandingHero";
 import Navbar from "@/components/Navbar";
-import AboutMe from "@/app/ui-sections/landing/AboutMe";
-import MyWork from "@/app/ui-sections/landing/MyWork";
-import Contact from "./ui-sections/landing/Contact";
+import AboutMe from "@/ui-sections/landing/AboutMe";
+import MyWork from "@/ui-sections/landing/MyWork";
+import Contact from "../ui-sections/landing/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {

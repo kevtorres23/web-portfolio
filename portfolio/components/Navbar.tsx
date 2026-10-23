@@ -1,12 +1,18 @@
-"use client"
+"use client";
 
 import NavbarLink from "./NavbarLink";
 import Button from "./Button";
+import { ListIcon, FolderIcon, UserCircleIcon, ChatCircleDotsIcon } from "@phosphor-icons/react";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 export default function Navbar() {
   return (
-    <div className="z-999 w-full xl:px-60 md:px-20 md:pt-5 fixed top-0">
-      <nav className="gap-3 flex w-full flex-row justify-between items-center bg-white border border-slate-200 px-7 md:py-3 py-5 md:rounded-full rounded-none shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+    <div className="z-9 w-full xl:px-60 md:px-20 md:pt-5 fixed top-0">
+      <nav className="gap-3 flex w-full flex-row justify-between items-center bg-white border border-slate-200 px-5 md:py-3 py-5 md:rounded-full rounded-none shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
         <p className="text-lg text-slate-900 font-semibold tracking-tighter">
           Kevin Torres
         </p>
@@ -17,8 +23,40 @@ export default function Navbar() {
           <NavbarLink text="Contacto" />
         </div>
 
-        <Button>Descargar mi CV</Button>
+        <div className="flex flex-row gap-4 items-center">
+          <Button>Descargar mi CV</Button>
+          <NavbarPopover />
+        </div>
       </nav>
     </div>
+  );
+}
+
+function NavbarPopover() {
+  return (
+    <Popover>
+      <PopoverTrigger
+        className="md:hidden block"
+        render={<ListIcon size={24} className="text-slate-800 " />}
+      />
+      <PopoverContent className="w-50 p-4" align="end">
+        <div className="flex flex-col items-start gap-4">
+          <button className="flex flex-row gap-1.5">
+            <FolderIcon size={18} className="text-slate-700" />
+            <NavbarLink text="Mi trabajo" />
+          </button>
+
+          <button className="flex flex-row gap-1.5">
+            <UserCircleIcon size={18} className="text-slate-700" />
+            <NavbarLink text="Sobre mí" />
+          </button>
+
+          <button className="flex flex-row gap-1.5">
+            <ChatCircleDotsIcon size={18} className="text-slate-700" />
+            <NavbarLink text="Contacto" />
+          </button>
+        </div>
+      </PopoverContent>
+    </Popover>
   );
 }

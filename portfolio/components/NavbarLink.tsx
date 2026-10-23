@@ -7,7 +7,7 @@ type LinkProps = {
 
 export default function NavbarLink(props: LinkProps) {
     return (
-        <button className={`text-sm font-normal text-slate-600`}>
+        <button className={`text-sm font-normal text-slate-700 cursor-pointer`}>
             {props.text}
         </button>
     )
