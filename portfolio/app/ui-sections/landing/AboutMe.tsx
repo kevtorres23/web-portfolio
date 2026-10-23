@@ -1,5 +1,5 @@
-import Tag from "@/components/Tag";
-import ToolCard from "@/components/ToolCard";
+import Tag from "@/app/components/Tag";
+import ToolCard from "@/app/components/ToolCard";
 
 export default function AboutMe() {
   const frontendStack = [
@@ -26,7 +26,7 @@ export default function AboutMe() {
     <main className="w-full flex flex-col items-start gap-10 h-auto bg-slate-900 md:py-30 py-25 md:px-25 px-8">
       <div className="flex md:flex-row flex-col gap-10 w-full md:items-center items-start justify-between">
         <section className="flex flex-col gap-4 lg:max-w-xl">
-          <Tag icon="aboutme" text="Sobre mí" isDark />
+          <Tag name="aboutme" isDark />
           <h1 className="text-4xl/snug font-medium tracking-tighter">
             Me involucro en el proceso completo del desarrollo web.
           </h1>

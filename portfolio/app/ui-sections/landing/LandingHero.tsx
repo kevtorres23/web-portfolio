@@ -1,6 +1,6 @@
 "use client";
 
-import HeroProjectCard from "@/components/HeroProjectCard";
+import HeroProjectCard from "@/app/components/HeroProjectCard";
 
 export default function LandingHero() {
   const projectCards = [
