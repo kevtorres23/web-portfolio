@@ -47,12 +47,12 @@ export default function Tag(props: TagProps) {
 
   return (
     <div
-      className={`bg-white px-3 py-1.5 self-start items-center justify-center flex rounded-full flex-row gap-2 ${props.isDark ? "bg-white/10" : "border border-main"}`}
+      className={`bg-white px-2.5 py-1 self-start items-center justify-center flex rounded-full flex-row gap-2 ${props.isDark ? "bg-white/10" : "border border-main/80"}`}
     >
       {tagVariants[props.name as keyof Record<TagName, TagContent>].icon}
 
       <p
-        className={`text-sm ${props.isDark ? "text-white" : "text-slate-600"}`}
+        className={`text-sm tracking-normal ${props.isDark ? "text-white" : "text-slate-700 font-medium"}`}
       >
         {tagVariants[props.name as keyof Record<TagName, TagContent>].name}
       </p>
