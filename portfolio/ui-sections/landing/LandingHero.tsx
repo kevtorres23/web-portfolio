@@ -29,9 +29,9 @@ export default function LandingHero() {
       </div>
 
       <div className="w-auto flex flex-row gap-5 infin">
-        {carouselItems.map((item) => {
+        {carouselItems.map((item, id) => {
           return (
-            <HeroProjectCard projectUrl={item} />
+            <HeroProjectCard key={id} projectUrl={item} />
           );
         })}
       </div>

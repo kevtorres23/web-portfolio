@@ -3,8 +3,6 @@
 import NavbarLink from "./NavbarLink";
 import Button from "./Button";
 
-type NavbarProps = {};
-
 export default function Navbar() {
   return (
     <div className="w-full xl:px-60 md:px-20 md:pt-5 fixed top-0">

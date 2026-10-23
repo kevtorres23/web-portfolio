@@ -1,5 +1,4 @@
-import Image from "next/image";
-import LandingHero from "@/ui-sections/LandingHero";
+import LandingHero from "@/ui-sections/landing/LandingHero";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
