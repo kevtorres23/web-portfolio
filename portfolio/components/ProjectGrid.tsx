@@ -1,6 +1,6 @@
 "use client"
 
-import { projectData } from "@/app/lib/project-data";
+import { projectData } from "@/lib/project-data";
 import ProjectCard from "./ProjectCard";
 
 type GridProps = {

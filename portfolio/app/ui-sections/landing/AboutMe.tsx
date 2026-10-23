@@ -1,5 +1,5 @@
-import Tag from "@/app/components/Tag";
-import ToolCard from "@/app/components/ToolCard";
+import Tag from "@/components/Tag";
+import ToolCard from "@/components/ToolCard";
 
 export default function AboutMe() {
   const frontendStack = [
@@ -27,8 +27,8 @@ export default function AboutMe() {
       <div className="flex md:flex-row flex-col gap-10 w-full md:items-center items-start justify-between">
         <section className="flex flex-col gap-4 lg:max-w-xl">
           <Tag name="aboutme" isDark />
-          <h1 className="text-4xl/snug font-medium tracking-tighter">
-            Me involucro en el proceso completo del desarrollo web.
+          <h1 className="text-4xl/snug font-medium tracking-tighter text-slate-50">
+            Me involucro en el proceso completo del desarrollo web
           </h1>
           <p className="text-slate-300">
             He tenido la oportunidad de recorrer productos de software por todas
@@ -42,7 +42,7 @@ export default function AboutMe() {
       </div>
 
       <section className="flex flex-col gap-4">
-        <h1 className="text-2xl/snug font-medium tracking-tighter">
+        <h1 className="text-2xl/snug font-medium tracking-tighter text-slate-100">
           Tecnologías frontend
         </h1>
         <div className="flex flex-row gap-4 flex-wrap">
@@ -53,7 +53,7 @@ export default function AboutMe() {
       </section>
 
       <section className="flex flex-col gap-4">
-        <h1 className="text-2xl/snug font-medium tracking-tighter">
+        <h1 className="text-2xl/snug font-medium tracking-tighter text-slate-100">
           Tecnologías backend
         </h1>
         <div className="flex flex-row gap-4 flex-wrap">

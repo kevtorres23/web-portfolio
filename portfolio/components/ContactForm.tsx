@@ -1,0 +1,38 @@
+import Button from "./Button";
+import { NormalInput } from "./NormalInput";
+import TextareaField from "./Textarea";
+
+export default function ContactForm() {
+  return (
+    <div className="bg-white rounded-xl flex flex-col md:p-8 p-6 h-auto gap-5 lg:max-w-lg w-full">
+      <h1 className="text-slate-950 text-xl font-medium tracking-tighter">
+        Formulario de contacto
+      </h1>
+
+      <form action="" className="flex flex-col gap-5 w-full">
+        <div className="flex md:flex-row flex-col w-full gap-5">
+          <NormalInput placeholder="" label="Tu nombre" type="text" id="name" />
+          <NormalInput
+            placeholder=""
+            label="Tu apellido"
+            type="text"
+            id="lastname"
+          />
+        </div>
+
+        <NormalInput
+          placeholder=""
+          label="Correo electrónico"
+          type="email"
+          id="email"
+        />
+
+        <TextareaField placeholder="" label="Comentario" id="comment" />
+
+        <Button className="flex flex-row gap-2 items-center justify-center">
+          Enviar mensaje
+        </Button>
+      </form>
+    </div>
+  );
+}

@@ -1,4 +1,4 @@
-import ProjectGrid from "@/app/components/ProjectGrid";
+import ProjectGrid from "@/components/ProjectGrid";
 
 export default function MyWork() {
   return (
