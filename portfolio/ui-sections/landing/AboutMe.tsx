@@ -38,7 +38,7 @@ export default function AboutMe() {
           </p>
         </section>
 
-        <div className="md:w-50 md:h-50 w-40 h-40 rounded-full bg-[url(../public/me.jpeg)] bg-cover bg-no-repeat bg-center"></div>
+        <div className="md:w-45 md:h-45 w-40 h-40 rounded-full bg-[url(../public/me.jpeg)] bg-cover bg-no-repeat bg-center"></div>
       </div>
 
       <section className="flex flex-col gap-4">
