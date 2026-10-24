@@ -24,7 +24,7 @@ export default function Contact() {
 
         <div className="w-full border border-slate-600 h-px"></div>
 
-        <div className="text flex flex-col gap-4 items-start">
+        <div className="text flex flex-col gap-6 items-start">
           <h1 className="text-xl/snug font-medium tracking-tighter text-slate-50">
             También puedes contactarme por:
           </h1>
