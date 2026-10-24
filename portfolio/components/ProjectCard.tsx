@@ -18,8 +18,8 @@ export default function ProjectCard(props: CardProps) {
   return (
     <div className="flex flex-col gap-5 cursor-pointer">
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.7 } }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
         viewport={{ once: true }}
         className="w-full lg:min-h-87 min-h-50 rounded-lg"
       >

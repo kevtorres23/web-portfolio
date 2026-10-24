@@ -1,21 +1,31 @@
 "use client";
 
 import NavbarLink from "./NavbarLink";
-import Button from "./Button";
-import { ListIcon, FolderIcon, UserCircleIcon, ChatCircleDotsIcon } from "@phosphor-icons/react";
+import NormalButton from "./Button";
+import { Button } from "./ui/button";
+import {
+  ListIcon,
+  FolderIcon,
+  UserCircleIcon,
+  ChatCircleDotsIcon,
+} from "@phosphor-icons/react";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
     <div className="z-9 w-full xl:px-60 md:px-20 md:pt-5 fixed top-0">
       <nav className="gap-3 flex w-full flex-row justify-between items-center bg-white border border-slate-200 backdrop-blur-xs px-5 md:py-3 py-5 md:rounded-full rounded-none shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
-        <p className="text-lg text-slate-900 font-semibold tracking-tighter">
+        <Link
+          href={"/"}
+          className="text-lg text-slate-900 font-semibold tracking-tighter"
+        >
           Kevin Torres
-        </p>
+        </Link>
 
         <div className="links md:flex hidden flex-row items-center place-content-center h-auto justify-center gap-7">
           <NavbarLink text="Mi trabajo" />
@@ -24,7 +34,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex flex-row gap-4 items-center">
-          <Button>Descargar mi CV</Button>
+          <NormalButton>Descargar mi CV</NormalButton>
           <NavbarPopover />
         </div>
       </nav>
@@ -37,7 +47,11 @@ function NavbarPopover() {
     <Popover>
       <PopoverTrigger
         className="md:hidden block"
-        render={<ListIcon size={24} className="text-slate-800 " />}
+        render={
+          <Button>
+            <ListIcon size={24} className="text-slate-800 " />
+          </Button>
+        }
       />
       <PopoverContent className="w-50 p-4" align="end">
         <div className="flex flex-col items-start gap-4">
