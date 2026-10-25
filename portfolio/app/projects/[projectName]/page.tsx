@@ -1,8 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProjectHero from "@/ui-sections/project-showcase/ProjectHero";
+import ProjectDetails from "@/ui-sections/project-showcase/ProjectDetails";
 import { projectData } from "@/lib/project-data";
-import { Suspense } from "react";
+import { projectTraceSource } from "next/dist/build/swc/generated-native";
+import ProjectCarousel from "@/ui-sections/project-showcase/ProjectCarousel";
 
 export const instant = false;
 
@@ -18,14 +20,27 @@ export default async function ProjectShowcase({
   )[0];
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-white font-sans">
+    <div className="flex flex-col md:gap-25 gap-15 flex-1 items-center justify-center bg-white font-sans">
       <Navbar />
 
       <ProjectHero
         name={project.name}
-        desc={project.fullDesc}
+        desc={project.cardDesc}
         mainImg={project.car1}
+        roles={project.roles}
       />
+
+      <ProjectDetails
+        date={project.date}
+        stack={project.stack}
+        website={project.website}
+        design={project.designFile}
+        longDesc={project.fullDesc}
+        objective={project.objective}
+        results={project.results}
+      />
+
+      <ProjectCarousel imgUrls={["", "", "", ""]}/>
 
       <Footer />
     </div>

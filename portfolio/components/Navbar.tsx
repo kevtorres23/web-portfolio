@@ -48,7 +48,7 @@ function NavbarPopover() {
       <PopoverTrigger
         className="md:hidden block"
         render={
-          <Button>
+          <Button variant="ghost">
             <ListIcon size={24} className="text-slate-800 " />
           </Button>
         }

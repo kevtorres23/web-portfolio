@@ -144,3 +144,11 @@
     @apply font-sans;
   }
 }
+
+h1 {
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
