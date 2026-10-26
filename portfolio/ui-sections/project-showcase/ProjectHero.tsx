@@ -2,6 +2,7 @@
 import { TagName } from "@/lib/types";
 import Tag from "@/components/Tag";
 import { easeInOut, motion } from "motion/react";
+import Image from "next/image";
 
 type HeroProps = {
   name: string;
@@ -37,8 +38,21 @@ export default function ProjectHero(props: HeroProps) {
         </motion.p>
       </div>
 
-      <div className="lg:h-125 md:h-100 h-50 bg-slate-200 w-full rounded-xl">
-        {/*Project image here:*/}
+      <div className="lg:h-125 md:h-100 h-50 bg-slate-200 w-full rounded-2xl">
+        <Image
+          src={props.mainImg}
+          unoptimized={true}
+          quality={100}
+          alt=""
+          width={0}
+          height={0}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            borderRadius: "20px",
+          }}
+        />
       </div>
     </main>
   );

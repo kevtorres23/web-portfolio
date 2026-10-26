@@ -1,14 +1,33 @@
+import Image from "next/image";
+
 export default function ProjectCarousel({ imgUrls }: { imgUrls: string[] }) {
   return (
-    <section className="flex flex-row gap-5 w-full h-auto overflow-x-scroll lg:px-25 md:px-12 px-8">
-      {new Array(4).map((url, id) => {
-        return (
-          <div key={id} className="w-30 h-20 bg-slate-200 rounded-lg">
-            {/*Project Image*/}
-            <p>Hola</p>
-          </div>
-        );
-      })}
+    <section className="w-auto items-start h-auto lg:px-25 md:px-12 px-8">
+      <div className="w-auto flex flex-row gap-5 overflow-x-hidden">
+        {imgUrls.map((url, id) => {
+          return (
+            <div
+              key={id}
+              className="w-120 h-90 rounded-lg border border-slate-200"
+            >
+              <Image
+                src={url}
+                unoptimized={true}
+                quality={100}
+                alt=""
+                width={0}
+                height={0}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  borderRadius: "12px",
+                }}
+              />
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 }
