@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 
 export default function Contact() {
   return (
-    <main className="w-full flex md:flex-row flex-col items-start justify-between lg:gap-25 gap-14 h-auto bg-slate-900 md:py-30 py-25 lg:px-25 md:px-14 px-8">
+    <main id="contact" className="w-full flex md:flex-row flex-col items-start justify-between lg:gap-25 gap-14 h-auto bg-slate-900 md:py-30 py-25 lg:px-25 md:px-14 px-8">
       <section className="flex flex-col gap-8 w-full">
         <div className="text flex flex-col gap-4">
           <Tag name="contact" isDark />

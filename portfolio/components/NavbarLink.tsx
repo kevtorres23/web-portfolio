@@ -9,7 +9,7 @@ type LinkProps = {
 
 export default function NavbarLink(props: LinkProps) {
   return (
-    <motion.a
+    <motion.div
       initial="initial"
       whileHover="hovered"
       className={`h-auto relative block overflow-hidden whitespace-nowrap text-sm font-normal text-slate-700 cursor-pointer`}
@@ -21,6 +21,6 @@ export default function NavbarLink(props: LinkProps) {
       <motion.div transition={{duration: 0.2}} variants={{ initial: { y: "100%" }, hovered: { y: "-50%" } }}>
         {props.text}
       </motion.div>
-    </motion.a>
+    </motion.div>
   );
 }

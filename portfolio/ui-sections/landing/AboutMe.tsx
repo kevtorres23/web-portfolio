@@ -23,7 +23,7 @@ export default function AboutMe() {
   ];
 
   return (
-    <main className="w-full flex flex-col items-start gap-10 h-auto bg-slate-900 md:py-30 py-25 md:px-25 px-8">
+    <main id="about-me" className="w-full flex flex-col items-start gap-10 h-auto bg-slate-900 md:py-30 py-25 md:px-25 px-8">
       <div className="flex md:flex-row flex-col gap-10 w-full md:items-center items-start justify-between">
         <section className="flex flex-col gap-4 lg:max-w-xl">
           <Tag name="aboutme" isDark />
