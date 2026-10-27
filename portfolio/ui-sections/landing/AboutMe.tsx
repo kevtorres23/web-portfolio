@@ -34,7 +34,7 @@ export default function AboutMe() {
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, ease: easeInOut, delay: 0.4 }}
+        transition={{ duration: 0.5, ease: easeInOut, delay: 0.2 }}
         className="flex md:flex-row flex-col gap-10 w-full md:items-center items-start justify-between"
       >
         <section className="flex flex-col gap-4 lg:max-w-xl">
@@ -57,7 +57,7 @@ export default function AboutMe() {
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, ease: easeInOut, delay: 0.4 }}
+        transition={{ duration: 0.5, ease: easeInOut, delay: 0.2 }}
         className="flex flex-col gap-4"
       >
         <h1 className="text-2xl/snug font-medium tracking-tighter text-slate-100">
@@ -74,7 +74,7 @@ export default function AboutMe() {
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, ease: easeInOut, delay: 0.4 }}
+        transition={{ duration: 0.5, ease: easeInOut, delay: 0.2 }}
         className="flex flex-col gap-4"
       >
         <h1 className="text-2xl/snug font-medium tracking-tighter text-slate-100">

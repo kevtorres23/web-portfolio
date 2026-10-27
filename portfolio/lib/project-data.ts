@@ -61,7 +61,7 @@ export const projectData: ProjectData[] = [
   {
     identifier: "hemisferios",
     name: "Hemisferios",
-    cardDesc: "Página web oficial para una planta purificadora de agua.",
+    cardDesc: "Sistema web integral conformado por una página web y un gestor de citas.",
     imageUrl: "/project-images/hemisferios-card-cover.png",
     roles: ["design", "fullstack"],
     stack: ["React", "Next.js", "MongoDB", "Node.js", "Express"],
@@ -86,7 +86,7 @@ export const projectData: ProjectData[] = [
   {
     identifier: "correos",
     name: "Correos de México",
-    cardDesc: "Página web oficial para una planta purificadora de agua.",
+    cardDesc: "Trabajo de diseño UI/UX para la aplicación móvil oficial de Correos de México.",
     imageUrl: "/project-images/correos-card-cover.png",
     roles: ["design"],
     stack: [],
@@ -133,7 +133,7 @@ export const projectData: ProjectData[] = [
   {
     identifier: "artex",
     name: "Artex Bordados",
-    cardDesc: "Página web oficial para una planta purificadora de agua.",
+    cardDesc: "Página web y ecommerce oficial de Artex, una tienda de bordados e impresiones.",
     imageUrl: "/project-images/artex-card-cover.png",
     roles: ["design", "frontend"],
     stack: ["React", "Tailwind CSS", "Flowbite"],
@@ -158,7 +158,7 @@ export const projectData: ProjectData[] = [
   {
     identifier: "sadasi",
     name: "Sadasi",
-    cardDesc: "Página web oficial para una planta purificadora de agua.",
+    cardDesc: "Sistema de administración para el equipo interno de Grupo Sadasi, una desarrolladora inmobiliaria en México.",
     imageUrl: "/project-images/sadasi-card-cover.png",
     roles: ["design", "frontend"],
     stack: ["React", "Tailwind CSS", "Shadcn/ui"],
