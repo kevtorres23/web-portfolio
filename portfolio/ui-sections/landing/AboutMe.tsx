@@ -1,5 +1,8 @@
+"use client";
+
 import Tag from "@/components/Tag";
 import ToolCard from "@/components/ToolCard";
+import { motion, easeInOut } from "motion/react";
 
 export default function AboutMe() {
   const frontendStack = [
@@ -23,8 +26,17 @@ export default function AboutMe() {
   ];
 
   return (
-    <main id="about-me" className="w-full flex flex-col items-start gap-10 h-auto bg-slate-900 md:py-30 py-25 md:px-25 px-8">
-      <div className="flex md:flex-row flex-col gap-10 w-full md:items-center items-start justify-between">
+    <main
+      id="about-me"
+      className="w-full flex flex-col items-start gap-10 h-auto bg-slate-900 md:py-30 py-25 md:px-25 px-8"
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: easeInOut, delay: 0.4 }}
+        className="flex md:flex-row flex-col gap-10 w-full md:items-center items-start justify-between"
+      >
         <section className="flex flex-col gap-4 lg:max-w-xl">
           <Tag name="aboutme" isDark />
           <h1 className="text-4xl/snug font-medium tracking-tighter text-slate-50">
@@ -39,9 +51,15 @@ export default function AboutMe() {
         </section>
 
         <div className="md:w-45 md:h-45 w-40 h-40 rounded-full bg-[url(../public/me.jpeg)] bg-cover bg-no-repeat bg-center"></div>
-      </div>
+      </motion.div>
 
-      <section className="flex flex-col gap-4">
+      <motion.section
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: easeInOut, delay: 0.4 }}
+        className="flex flex-col gap-4"
+      >
         <h1 className="text-2xl/snug font-medium tracking-tighter text-slate-100">
           Tecnologías frontend
         </h1>
@@ -50,9 +68,15 @@ export default function AboutMe() {
             return <ToolCard key={id} toolName={tool} />;
           })}
         </div>
-      </section>
+      </motion.section>
 
-      <section className="flex flex-col gap-4">
+      <motion.section
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: easeInOut, delay: 0.4 }}
+        className="flex flex-col gap-4"
+      >
         <h1 className="text-2xl/snug font-medium tracking-tighter text-slate-100">
           Tecnologías backend
         </h1>
@@ -61,7 +85,7 @@ export default function AboutMe() {
             return <ToolCard key={id} toolName={tool} />;
           })}
         </div>
-      </section>
+      </motion.section>
     </main>
   );
 }

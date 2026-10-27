@@ -21,7 +21,7 @@ export default function ProjectCard(props: CardProps) {
       href={props.projectLink}
       className="flex flex-col gap-5 cursor-pointer"
       initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+      whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.2 } }}
       viewport={{ once: true }}
     >
       <div className="w-full lg:min-h-87 min-h-50 rounded-lg">
@@ -48,7 +48,7 @@ export default function ProjectCard(props: CardProps) {
       </div>
 
       <div className="details flex flex-col md:gap-2 gap-1 -mt-1">
-        <p className={`md:text-3xl text-2xl font-medium tracking-tighter ${props.isDark ? "text-slate-100" : "text-slate-900"}`}>
+        <p className={`md:text-3xl text-2xl font-semibold tracking-tighter ${props.isDark ? "text-slate-100" : "text-slate-900"}`}>
           {props.name}
         </p>
         <p className={`text-sm font-normal ${props.isDark ? "text-slate-400" : "text-slate-600"}`}>{props.cardDesc}</p>
