@@ -16,13 +16,13 @@ type CardProps = {
 
 export default function ProjectCard(props: CardProps) {
   return (
-    <div className="flex flex-col gap-5 cursor-pointer">
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-        viewport={{ once: true }}
-        className="w-full lg:min-h-87 min-h-50 rounded-lg"
-      >
+    <motion.div
+      className="flex flex-col gap-5 cursor-pointer"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+      viewport={{ once: true }}
+    >
+      <div className="w-full lg:min-h-87 min-h-50 rounded-lg">
         <Image
           src={props.imageUrl}
           unoptimized={true}
@@ -37,7 +37,7 @@ export default function ProjectCard(props: CardProps) {
             borderRadius: "10px",
           }}
         />
-      </motion.div>
+      </div>
 
       <div className="stack flex flex-row flex-wrap gap-3">
         {props.roles.map((role, id) => (
@@ -51,6 +51,6 @@ export default function ProjectCard(props: CardProps) {
         </p>
         <p className="text-sm font-normal text-slate-600">{props.cardDesc}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }

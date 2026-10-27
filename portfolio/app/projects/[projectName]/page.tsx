@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import ProjectHero from "@/ui-sections/project-showcase/ProjectHero";
 import ProjectDetails from "@/ui-sections/project-showcase/ProjectDetails";
 import { projectData } from "@/lib/project-data";
+import Image from "next/image";
 import ProjectCarousel from "@/ui-sections/project-showcase/ProjectCarousel";
 
 export const instant = false;
@@ -18,8 +19,15 @@ export default async function ProjectShowcase({
     (project) => project.identifier === projectName,
   )[0];
 
+  const projectImages = [
+    project.car1,
+    project.car2,
+    project.car3,
+    project.car4,
+  ];
+
   return (
-    <div className="flex flex-col md:gap-25 gap-15 flex-1 items-start overflow-x-scroll justify-center bg-white font-sans">
+    <div className="flex flex-col md:gap-25 gap-15 flex-1 items-start max-w-full justify-center bg-white font-sans">
       <Navbar />
 
       <ProjectHero
@@ -39,7 +47,32 @@ export default async function ProjectShowcase({
         results={project.results}
       />
 
-      <ProjectCarousel imgUrls={[project.car1, project.car2, project.car3, project.car4]}/>
+      <div className="md:block hidden">
+        <ProjectCarousel
+          imgUrls={[project.car1, project.car2, project.car3, project.car4]}
+        />
+      </div>
+
+      <div className="md:hidden flex flex-col gap-8 px-8">
+        {projectImages.map((url, index) => (
+          <div key={index} className="w-full">
+            <Image
+              src={url}
+              unoptimized={true}
+              quality={100}
+              alt=""
+              width={0}
+              height={0}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "12px",
+              }}
+            />{" "}
+          </div>
+        ))}
+      </div>
 
       <Footer />
     </div>

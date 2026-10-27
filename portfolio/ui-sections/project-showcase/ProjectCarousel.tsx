@@ -1,33 +1,46 @@
 import Image from "next/image";
+import {
+  CarouselPrevious,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  Carousel,
+} from "@/components/ui/carousel";
 
 export default function ProjectCarousel({ imgUrls }: { imgUrls: string[] }) {
   return (
-    <section className="w-auto items-start h-auto lg:px-25 md:px-12 px-8">
-      <div className="w-auto flex flex-row gap-5 overflow-x-hidden">
-        {imgUrls.map((url, id) => {
-          return (
-            <div
-              key={id}
-              className="w-120 h-90 rounded-lg border border-slate-200"
-            >
-              <Image
-                src={url}
-                unoptimized={true}
-                quality={100}
-                alt=""
-                width={0}
-                height={0}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  borderRadius: "12px",
-                }}
-              />
-            </div>
-          );
-        })}
-      </div>
+    <section className="w-full items-center justify-center lg:px-25 md:px-12 px-8 m-0">
+      <Carousel
+        opts={{
+          align: "start",
+        }}
+        className="sm:max-w-full max-w-xs"
+      >
+        <CarouselPrevious />
+        <CarouselContent className="w-full">
+          {imgUrls.map((url, index) => (
+            <CarouselItem key={index} className="basis-full lg:basis-1/2">
+              <div className="">
+                <Image
+                  src={url}
+                  unoptimized={true}
+                  quality={100}
+                  alt=""
+                  width={0}
+                  height={0}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "12px",
+                  }}
+                />{" "}
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselNext />
+      </Carousel>
     </section>
   );
 }

@@ -13,8 +13,8 @@ type HeroProps = {
 
 export default function ProjectHero(props: HeroProps) {
   return (
-    <main className="flex overflow-hidden flex-col gap-8 w-full h-auto lg:pt-40 sm:pt-35 pt-30 lg:px-25 md:px-12 px-8 items-center justify-center">
-      <div className="central-text flex flex-col md:gap-5 gap-4 items-center justify-center xl:max-w-xl">
+    <main className="flex overflow-hidden flex-col md:gap-14 gap-8 w-full h-auto lg:pt-40 sm:pt-35 pt-30 lg:px-25 md:px-12 px-8 items-center justify-center">
+      <div className="central-text flex flex-col md:gap-3 gap-4 items-center justify-center xl:max-w-xl">
         <div className="stack flex flex-row flex-wrap gap-3">
           {props.roles.map((role, id) => (
             <Tag name={role} key={id} isDark={false} />
@@ -24,7 +24,7 @@ export default function ProjectHero(props: HeroProps) {
           initial={{ y: 35, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: easeInOut }}
-          className="sm:text-5xl/tight text-4xl/tight tracking-[-3.5px] font-medium text-center text-slate-900"
+          className="sm:text-5xl/tight text-3xl/tight tracking-[-3.5px] font-medium text-center text-slate-900"
         >
           {props.name}
         </motion.h1>
@@ -38,7 +38,7 @@ export default function ProjectHero(props: HeroProps) {
         </motion.p>
       </div>
 
-      <div className="lg:h-125 md:h-100 h-50 bg-slate-200 w-full rounded-2xl">
+      <div className="lg:h-150 md:h-100 h-70 bg-slate-200 w-full rounded-2xl">
         <Image
           src={props.mainImg}
           unoptimized={true}
