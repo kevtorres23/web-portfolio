@@ -1,10 +1,17 @@
 import Button from "./Button";
 import { NormalInput } from "./NormalInput";
 import TextareaField from "./Textarea";
+import { motion, easeInOut } from "motion/react";
 
 export default function ContactForm() {
   return (
-    <div className="bg-white rounded-xl flex flex-col md:p-8 p-6 h-auto gap-5 lg:max-w-lg w-full">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: easeInOut, delay: 0.4 }}
+      className="bg-white rounded-xl flex flex-col md:p-8 p-6 h-auto gap-5 lg:max-w-lg w-full"
+    >
       <h1 className="text-slate-950 text-xl font-semibold tracking-tighter">
         Formulario de contacto
       </h1>
@@ -33,6 +40,6 @@ export default function ContactForm() {
           Enviar mensaje
         </Button>
       </form>
-    </div>
+    </motion.div>
   );
 }

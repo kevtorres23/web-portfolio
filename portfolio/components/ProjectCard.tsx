@@ -21,7 +21,7 @@ export default function ProjectCard(props: CardProps) {
       href={props.projectLink}
       className="flex flex-col gap-5 cursor-pointer"
       initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+      whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.2 } }}
       viewport={{ once: true }}
     >
       <div className="w-full lg:min-h-87 min-h-50 rounded-lg">

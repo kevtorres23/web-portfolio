@@ -11,10 +11,10 @@ export default function Footer() {
   return (
     <footer className="bg-slate-50 w-full h-auto py-12 md:px-25 px-8 flex md:flex-row flex-col gap-10 md:items-center items-start justify-between">
       <section className="flex flex-col gap-2">
-        <h1 className="text-2xl font-medium tracking-tighter text-slate-800">
+        <h1 className="text-2xl font-semibold tracking-tighter text-slate-800">
           Kevin Torres
         </h1>
-        <p className="text-sm font-normal text-slate-500">
+        <p className="text-sm font-normal text-slate-600">
           Diseñador y desarrollador web
         </p>
       </section>

@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import {
   CarouselPrevious,
@@ -6,10 +8,17 @@ import {
   CarouselNext,
   Carousel,
 } from "@/components/ui/carousel";
+import { easeInOut, motion } from "motion/react";
 
 export default function ProjectCarousel({ imgUrls }: { imgUrls: string[] }) {
   return (
-    <section className="w-full items-center justify-center lg:px-25 md:px-12 px-8 m-0">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: easeInOut }}
+      className="w-full items-center justify-center lg:px-25 md:px-12 px-8 m-0"
+    >
       <Carousel
         opts={{
           align: "start",
@@ -41,6 +50,6 @@ export default function ProjectCarousel({ imgUrls }: { imgUrls: string[] }) {
         </CarouselContent>
         <CarouselNext />
       </Carousel>
-    </section>
+    </motion.section>
   );
 }

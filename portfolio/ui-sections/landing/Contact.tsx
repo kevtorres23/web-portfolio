@@ -4,11 +4,21 @@ import Tag from "@/components/Tag";
 import { EnvelopeIcon, WhatsappLogoIcon } from "@phosphor-icons/react";
 import Button from "@/components/Button";
 import ContactForm from "@/components/ContactForm";
+import { motion, easeInOut } from "motion/react";
 
 export default function Contact() {
   return (
-    <main id="contact" className="w-full flex md:flex-row flex-col items-start justify-between lg:gap-25 gap-14 h-auto bg-slate-900 md:py-30 py-25 lg:px-25 md:px-14 px-8">
-      <section className="flex flex-col gap-8 w-full">
+    <main
+      id="contact"
+      className="w-full flex md:flex-row flex-col items-start justify-between lg:gap-25 gap-14 h-auto bg-slate-900 md:py-30 py-25 lg:px-25 md:px-14 px-8"
+    >
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: easeInOut, delay: 0.25 }}
+        className="flex flex-col gap-8 w-full"
+      >
         <div className="text flex flex-col gap-4">
           <Tag name="contact" isDark />
           <h1 className="text-4xl/snug font-medium tracking-tighter text-slate-50">
@@ -39,10 +49,10 @@ export default function Contact() {
             Envíame un WhatsApp
           </Button>
         </div>
-      </section>
+      </motion.section>
 
       {/*Formulario de Contacto*/}
-      <ContactForm/>
+      <ContactForm />
     </main>
   );
 }
