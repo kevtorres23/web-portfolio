@@ -28,9 +28,17 @@ export default function Navbar() {
         </Link>
 
         <div className="links md:flex hidden flex-row items-center place-content-center h-auto justify-center gap-7">
-          <NavbarLink text="Mi trabajo" />
-          <NavbarLink text="Sobre mí" />
-          <NavbarLink text="Contacto" />
+          <Link href={"/#my-work"}>
+            <NavbarLink text="Mi trabajo" />
+          </Link>
+
+          <Link href={"/#about-me"}>
+            <NavbarLink text="Sobre mí" />
+          </Link>
+
+          <Link href={"/#contact"}>
+            <NavbarLink text="Contacto" />
+          </Link>
         </div>
 
         <div className="flex flex-row gap-4 items-center">
@@ -48,7 +56,7 @@ function NavbarPopover() {
       <PopoverTrigger
         className="md:hidden block"
         render={
-          <Button>
+          <Button variant="ghost">
             <ListIcon size={24} className="text-slate-800 " />
           </Button>
         }
