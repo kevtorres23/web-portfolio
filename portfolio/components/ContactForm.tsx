@@ -5,7 +5,7 @@ import TextareaField from "./Textarea";
 export default function ContactForm() {
   return (
     <div className="bg-white rounded-xl flex flex-col md:p-8 p-6 h-auto gap-5 lg:max-w-lg w-full">
-      <h1 className="text-slate-950 text-xl font-medium tracking-tighter">
+      <h1 className="text-slate-950 text-xl font-semibold tracking-tighter">
         Formulario de contacto
       </h1>
 

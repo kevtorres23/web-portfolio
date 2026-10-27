@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   GithubLogoIcon,
   LinkedinLogoIcon,
@@ -19,9 +20,26 @@ export default function Footer() {
       </section>
 
       <div className="links flex flex-row gap-5">
-        <LinkedinLogoIcon size={28} className="text-slate-600 hover:text-main/80 cursor-pointer" />
-        <GithubLogoIcon size={28} className="text-slate-600 hover:text-main/80 cursor-pointer" />
-        <DiscordLogoIcon size={28} className="text-slate-600 hover:text-main/80 cursor-pointer" />
+        <Link href="https://www.linkedin.com/in/kevin-torres-urbina/">
+          <LinkedinLogoIcon
+            size={28}
+            className="text-slate-600 hover:text-main/80 cursor-pointer"
+          />
+        </Link>
+
+        <Link href="https://github.com/kevtorres23">
+          <GithubLogoIcon
+            size={28}
+            className="text-slate-600 hover:text-main/80 cursor-pointer"
+          />
+        </Link>
+
+        <Link href="https://www.linkedin.com/in/kevin-torres-urbina/">
+          <DiscordLogoIcon
+            size={28}
+            className="text-slate-600 hover:text-main/80 cursor-pointer"
+          />
+        </Link>
       </div>
     </footer>
   );
