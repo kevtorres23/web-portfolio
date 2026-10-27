@@ -6,6 +6,7 @@ import { projectData } from "@/lib/project-data";
 import Image from "next/image";
 import ProjectCarousel from "@/ui-sections/project-showcase/ProjectCarousel";
 import ProjectGrid from "@/components/ProjectGrid";
+import { redirect } from "next/navigation";
 
 export const instant = false;
 
@@ -19,6 +20,10 @@ export default async function ProjectShowcase({
   const project = projectData.filter(
     (project) => project.identifier === projectName,
   )[0];
+
+  if (!project) {
+    redirect("/");
+  };
 
   const projectImages = [
     project.car1,

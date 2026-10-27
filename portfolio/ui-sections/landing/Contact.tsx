@@ -5,6 +5,7 @@ import { EnvelopeIcon, WhatsappLogoIcon } from "@phosphor-icons/react";
 import Button from "@/components/Button";
 import ContactForm from "@/components/ContactForm";
 import { motion, easeInOut } from "motion/react";
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -44,10 +45,12 @@ export default function Contact() {
             <p className="text-slate-300">kevintu236@gmail.com</p>
           </div>
 
-          <Button className="bg-emerald-600! hover:bg-emerald-600/80! flex flex-row gap-2 items-center">
-            <WhatsappLogoIcon size={24} className="text-slate-300" />
-            Envíame un WhatsApp
-          </Button>
+          <Link href={"https://wa.me/526181889026"} >
+            <Button className="bg-emerald-600! hover:bg-emerald-600/80! flex flex-row gap-2 items-center">
+              <WhatsappLogoIcon size={24} className="text-slate-300" />
+              Envíame un WhatsApp
+            </Button>
+          </Link>
         </div>
       </motion.section>
 
