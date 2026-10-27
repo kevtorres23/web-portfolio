@@ -1,3 +1,5 @@
+"use client";
+
 import { CheckIcon, ExclamationMarkIcon } from "@phosphor-icons/react";
 import NormalButton from "./Button";
 import { NormalInput } from "./NormalInput";
@@ -12,6 +14,12 @@ export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [formError, setFormError] = useState("");
   const form = useRef(null);
+
+  // Form variables
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   function onSendMessage(e: React.SubmitEvent) {
     e.preventDefault();
@@ -65,14 +73,20 @@ export default function ContactForm() {
             <NormalInput
               placeholder=""
               label="Tu nombre"
+              name="name"
               type="text"
               id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
             <NormalInput
               placeholder=""
               label="Tu apellido"
               type="text"
               id="lastname"
+              name="lastname"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
             />
           </div>
 
@@ -81,11 +95,16 @@ export default function ContactForm() {
             label="Correo electrónico"
             type="email"
             id="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
 
-          <TextareaField placeholder="" label="Comentario" id="message" />
+          <TextareaField name="message" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="" label="Comentario" id="message" />
 
-          <NormalButton className={`flex flex-row gap-2 items-center justify-center ${isLoading ? "opacity-75 cursor-progress!" : "opacity-100"}`}>
+          <NormalButton
+            className={`flex flex-row gap-2 items-center justify-center ${isLoading ? "opacity-75 cursor-progress!" : "opacity-100"}`}
+          >
             {isLoading ? "Enviando..." : "Enviar mensaje"}
           </NormalButton>
         </form>
@@ -120,7 +139,11 @@ export default function ContactForm() {
       {!isFormSent && formError != "" && (
         <div className="flex flex-col items-center justify-center gap-5">
           <div className="w-auto h-auto p-4 items-center justify-center bg-main rounded-full">
-            <ExclamationMarkIcon weight="bold" size={30} className="text-white" />
+            <ExclamationMarkIcon
+              weight="bold"
+              size={30}
+              className="text-white"
+            />
           </div>
 
           <div className="flex flex-col gap-2 items-center justify-center">
