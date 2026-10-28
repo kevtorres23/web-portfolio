@@ -41,7 +41,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="flex flex-row gap-4 items-center">
+        <div className="flex flex-row gap-3 items-center">
           <NormalButton>Descargar mi CV</NormalButton>
           <NavbarPopover />
         </div>
@@ -56,13 +56,13 @@ function NavbarPopover() {
       <PopoverTrigger
         className="md:hidden block"
         render={
-          <Button variant="ghost">
-            <ListIcon size={24} className="text-slate-800 " />
+          <Button variant="ghost" className="flex w-auto h-auto items-center justify-center px-2 py-2">
+            <ListIcon className="text-slate-800 w-5.5! h-5.5!" />
           </Button>
         }
       />
-      <PopoverContent className="w-50 p-4" align="end">
-        <div className="flex flex-col items-start gap-4">
+      <PopoverContent className="w-50 px-4 py-3" align="end">
+        <div className="flex flex-col items-start gap-0">
           <button className="flex flex-row gap-1.5 items-center">
             <FolderIcon size={18} className="text-slate-700" />
             <NavbarLink text="Mi trabajo" />
