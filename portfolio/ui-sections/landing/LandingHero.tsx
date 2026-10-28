@@ -2,6 +2,8 @@
 
 import HeroProjectCard from "@/components/HeroProjectCard";
 import { easeInOut, motion } from "motion/react";
+import { useTranslation } from "react-i18next";
+import "@/lib/i18n/i18n";
 
 export default function LandingHero() {
   const projectCards = [
@@ -15,6 +17,8 @@ export default function LandingHero() {
 
   const carouselItems = [...projectCards, ...projectCards, ...projectCards];
 
+  const { t } = useTranslation();
+
   return (
     <main className="flex overflow-hidden flex-col gap-20 w-full h-auto pb-30 lg:pt-45 sm:pt-40 pt-35 px-8 items-center justify-center">
       <div className="central-text flex flex-col gap-5 items-center justify-center xl:max-w-xl">
@@ -24,8 +28,8 @@ export default function LandingHero() {
           transition={{ duration: 0.5, ease: easeInOut }}
           className="sm:text-5xl/tight text-4xl/tight tracking-[-3.5px] font-medium text-center text-slate-900"
         >
-          ¡Hola! Soy Kevin. Diseño y desarrollo{" "}
-          <span className="text-main font-semibold">soluciones web</span>.
+          {t("heroTitle")}{" "}
+          <span className="text-main font-semibold">{t("heroTitleSpan")}</span>.
         </motion.h1>
         <motion.p
           initial={{ y: 35, opacity: 0 }}
