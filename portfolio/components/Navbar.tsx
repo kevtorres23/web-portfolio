@@ -29,21 +29,21 @@ export default function Navbar() {
 
         <div className="links md:flex hidden flex-row items-center place-content-center h-auto justify-center gap-7">
           <Link href={"/#my-work"}>
-            <NavbarLink text="Mi trabajo" />
+            <NavbarLink text="My work" />
           </Link>
 
           <Link href={"/#about-me"}>
-            <NavbarLink text="Sobre mí" />
+            <NavbarLink text="About me" />
           </Link>
 
           <Link href={"/#contact"}>
-            <NavbarLink text="Contacto" />
+            <NavbarLink text="Contact" />
           </Link>
         </div>
 
         <div className="flex flex-row gap-3 items-center">
-          <Link href="https://drive.google.com/file/d/1UFNCN3WKPuP39QnyVy_dwCGXOflsKnYl/view?usp=sharing" download>
-            <NormalButton>Descargar mi CV</NormalButton>
+          <Link href="/Kevin Torres Urbina - CV.pdf" download>
+            <NormalButton>Download my resume</NormalButton>
           </Link>
           <NavbarPopover />
         </div>
@@ -70,17 +70,17 @@ function NavbarPopover() {
         <div className="flex flex-col items-start gap-0">
           <button className="flex flex-row gap-1.5 items-center">
             <FolderIcon size={18} className="text-slate-700" />
-            <NavbarLink text="Mi trabajo" />
+            <NavbarLink text="My work" />
           </button>
 
           <button className="flex flex-row gap-1.5 items-center">
             <UserCircleIcon size={18} className="text-slate-700" />
-            <NavbarLink text="Sobre mí" />
+            <NavbarLink text="About me" />
           </button>
 
           <button className="flex flex-row gap-1.5 items-center">
             <ChatCircleDotsIcon size={18} className="text-slate-700" />
-            <NavbarLink text="Contacto" />
+            <NavbarLink text="Contact" />
           </button>
         </div>
       </PopoverContent>

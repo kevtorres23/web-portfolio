@@ -40,13 +40,13 @@ export default function AboutMe() {
         <section className="flex flex-col gap-4 lg:max-w-xl">
           <Tag name="aboutme" isDark />
           <h1 className="text-4xl/snug font-medium tracking-tighter text-slate-50">
-            Me involucro en el proceso completo del desarrollo web
+            I get involved in every stage of web development
           </h1>
           <p className="text-slate-300">
-            He tenido la oportunidad de recorrer productos de software por todas
-            sus fases y siempre encuentro algo emocionante y nuevo en ello. Es
-            por eso que el desarrollo web me encanta tanto. Utilizo las
-            siguientes herramientas en mi flujo de trabajo.
+            I’ve had the opportunity to work on software products through every
+            stage, and I always find something exciting and new in the process.
+            That’s why I love web development so much. These are the tools I use
+            in my workflow.
           </p>
         </section>
 
@@ -61,7 +61,7 @@ export default function AboutMe() {
         className="flex flex-col gap-4"
       >
         <h1 className="text-2xl/snug font-medium tracking-tighter text-slate-100">
-          Tecnologías frontend
+          Frontend technologies
         </h1>
         <div className="flex flex-row gap-4 flex-wrap">
           {frontendStack.map((tool, id) => {
@@ -78,7 +78,7 @@ export default function AboutMe() {
         className="flex flex-col gap-4"
       >
         <h1 className="text-2xl/snug font-medium tracking-tighter text-slate-100">
-          Tecnologías backend
+          Backend technologies
         </h1>
         <div className="flex flex-row gap-4 flex-wrap">
           {backendStack.map((tool, id) => {

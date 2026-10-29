@@ -42,7 +42,7 @@ export default function ContactForm() {
         },
         (error) => {
           setFormError(
-            "Un error ocurrió y no fue posible enviar tu mensaje. Por favor, inténtalo de nuevo.",
+            "Something went wrong and your message could not be sent. Please try again.",
           );
           setIsLoading(false);
           console.log(error);
@@ -66,13 +66,13 @@ export default function ContactForm() {
           className="flex flex-col gap-5 w-full"
         >
           <h1 className="text-slate-950 text-xl font-semibold tracking-tighter">
-            Formulario de contacto
+            Contact form
           </h1>
 
           <div className="flex md:flex-row flex-col w-full gap-5">
             <NormalInput
               placeholder=""
-              label="Tu nombre"
+              label="First name"
               name="name"
               type="text"
               id="name"
@@ -81,7 +81,7 @@ export default function ContactForm() {
             />
             <NormalInput
               placeholder=""
-              label="Tu apellido"
+              label="Last name"
               type="text"
               id="lastname"
               name="lastname"
@@ -92,7 +92,7 @@ export default function ContactForm() {
 
           <NormalInput
             placeholder=""
-            label="Correo electrónico"
+            label="Email address"
             type="email"
             id="email"
             name="email"
@@ -100,12 +100,12 @@ export default function ContactForm() {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <TextareaField name="message" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="" label="Comentario" id="message" />
+          <TextareaField name="message" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="" label="Message" id="message" />
 
           <NormalButton
             className={`flex flex-row gap-2 items-center justify-center ${isLoading ? "opacity-75 cursor-progress!" : "opacity-100"}`}
           >
-            {isLoading ? "Enviando..." : "Enviar mensaje"}
+            {isLoading ? "Sending..." : "Send message"}
           </NormalButton>
         </form>
       )}
@@ -118,11 +118,11 @@ export default function ContactForm() {
 
           <div className="flex flex-col gap-2 items-center justify-center">
             <h1 className="font-semibold text-xl tracking-tight text-slate-900 text-center">
-              ¡Gracias por contactarme!
+              Thanks for reaching out!
             </h1>
             <p className="font-normal text-sm text-slate-600 text-center">
-              Me pondré en contacto contigo cuanto antes para responder a tu
-              solicitud, mensaje o comentario.
+              I’ll get back to you as soon as possible to respond to your
+              request, message, or comment.
             </p>
           </div>
 
@@ -131,7 +131,7 @@ export default function ContactForm() {
             variant="ghost"
             className="flex flex-row gap-2 text-main hover:text-main! font-semibold cursor-pointer items-center justify-center"
           >
-            Enviar otro mensaje
+            Send another message
           </Button>
         </div>
       )}
@@ -148,7 +148,7 @@ export default function ContactForm() {
 
           <div className="flex flex-col gap-2 items-center justify-center">
             <h1 className="font-semibold text-xl tracking-tight text-slate-900 text-center">
-              Ocurrió un error inesperado
+              An unexpected error occurred
             </h1>
             <p className="font-normal text-sm text-slate-600 text-center">
               {formError}
@@ -160,7 +160,7 @@ export default function ContactForm() {
             variant="ghost"
             className="flex flex-row gap-2 text-main hover:text-main! font-semibold cursor-pointer items-center justify-center"
           >
-            Intentarlo de nuevo
+            Try again
           </Button>
         </div>
       )}

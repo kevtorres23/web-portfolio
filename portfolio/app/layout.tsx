@@ -10,7 +10,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Kevin Torres",
-  description: "¡Bienvenido a mi portafolio web!",
+  description: "Welcome to my web portfolio.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

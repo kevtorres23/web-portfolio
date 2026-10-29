@@ -23,13 +23,12 @@ export default function Contact() {
         <div className="text flex flex-col gap-4">
           <Tag name="contact" isDark />
           <h1 className="text-4xl/snug font-medium tracking-tighter text-slate-50">
-            ¡Hablemos!
+            Let’s talk!
           </h1>
           <p className="text-slate-300">
-            Estoy siempre abierto a trabajar en proyectos que requieran código
-            frontend, backend, o diseño UI/UX. Puedes contactarme a través del
-            siguiente formulario y hablemos sobre las maneras en las que puedo
-            colaborar.
+            I’m always open to working on projects involving frontend or
+            backend development, or UI/UX design. Get in touch using the form
+            below, and let’s talk about how I can help.
           </p>
         </div>
 
@@ -37,7 +36,7 @@ export default function Contact() {
 
         <div className="text flex flex-col gap-6 items-start">
           <h1 className="text-xl/snug font-medium tracking-tighter text-slate-50">
-            También puedes contactarme por:
+            You can also reach me at:
           </h1>
 
           <div className="flex flex-row items-center justify-start gap-2">
@@ -48,13 +47,13 @@ export default function Contact() {
           <Link href={"https://wa.me/526181889026"} >
             <Button className="bg-emerald-600! hover:bg-emerald-600/80! flex flex-row gap-2 items-center">
               <WhatsappLogoIcon size={24} className="text-slate-300" />
-              Envíame un WhatsApp
+              Message me on WhatsApp
             </Button>
           </Link>
         </div>
       </motion.section>
 
-      {/*Formulario de Contacto*/}
+      {/* Contact form */}
       <ContactForm />
     </main>
   );
