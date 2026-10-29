@@ -42,7 +42,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex flex-row gap-3 items-center">
-          <Link href="https://drive.google.com/file/d/1UFNCN3WKPuP39QnyVy_dwCGXOflsKnYl/view?usp=sharing" download>
+          <Link href="/Kevin Torres Urbina - CV.pdf" download>
             <NormalButton>Descargar mi CV</NormalButton>
           </Link>
           <NavbarPopover />
