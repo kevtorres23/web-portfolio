@@ -15,7 +15,7 @@ export default function Footer() {
           Kevin Torres
         </h1>
         <p className="text-sm font-normal text-slate-600">
-          Diseñador y desarrollador web
+          Web designer and developer
         </p>
       </section>
 

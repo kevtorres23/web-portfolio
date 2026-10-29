@@ -5,9 +5,9 @@ export default function MyWork() {
     <main id="my-work" className="w-full flex flex-col items-start gap-10 h-auto bg-white md:py-30 py-25 md:px-25 px-8">
       <section className="flex md:flex-row flex-col gap-4 w-full md:items-center items-start justify-between">
         <h1 className="text-5xl text-slate-900 tracking-[-3px] font-medium">
-          Mi trabajo
+          My work
         </h1>
-        <p className="text-sm text-slate-600 md:max-w-64 md:text-right">Aquí puedes encontrar diferentes proyectos en los que he tenido la oportunidad de trabajar.</p>
+        <p className="text-sm text-slate-600 md:max-w-64 md:text-right">Explore some of the projects I’ve had the opportunity to work on.</p>
       </section>
 
       <ProjectGrid isDark={false} missingProject="none"/>

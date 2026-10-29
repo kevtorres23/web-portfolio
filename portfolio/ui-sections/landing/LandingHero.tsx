@@ -37,9 +37,8 @@ export default function LandingHero() {
           transition={{ duration: 0.5, ease: easeInOut, delay: 0.2 }}
           className="text-center text-slate-600"
         >
-          Me fascina el proceso completo de desarrollar soluciones web.
-          Combino herramientas de diseño con habilidades de código para crear
-          productos web completos y funcionales.
+          I love every part of building web solutions. I combine design tools
+          with coding skills to create complete, functional web products.
         </motion.p>
       </div>
 

@@ -25,23 +25,23 @@ export default function Tag(props: TagProps) {
   const tagVariants: Record<TagName, TagContent> = {
     aboutme: {
       icon: <UserListIcon size={18} className="text-main" />,
-      name: "Sobre mí",
+      name: "About me",
     },
     fullstack: {
       icon: <StackIcon size={18} className="text-main" />,
-      name: "Desarrollador full-stack",
+      name: "Full-stack developer",
     },
     design: {
       icon: <PaletteIcon size={18} className="text-main" />,
-      name: "Diseñador UI/UX",
+      name: "UI/UX designer",
     },
     frontend: {
       icon: <LaptopIcon size={18} className="text-main" />,
-      name: "Desarrollador frontend",
+      name: "Frontend developer",
     },
     contact: {
       icon: <ChatCircleDotsIcon size={18} className="text-main" />,
-      name: "Contacto",
+      name: "Contact",
     },
   };
 

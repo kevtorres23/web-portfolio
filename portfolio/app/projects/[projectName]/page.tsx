@@ -84,10 +84,10 @@ export default async function ProjectShowcase({
         <main className="w-full flex flex-col items-start justify-between lg:gap-15 gap-14 h-auto bg-slate-900 md:py-30 py-20 lg:px-25 md:px-14 px-8">
           <section className="flex md:flex-row flex-col gap-4 w-full md:items-center items-start justify-between">
             <h1 className="md:text-5xl text-4xl text-slate-50 tracking-[-3px] font-medium">
-              Otros proyectos
+              Other projects
             </h1>
             <p className="text-sm text-slate-300 md:max-w-64 md:text-right">
-              ¡Conoce el resto de mi trabajo a continuación! Selecciona una tarjeta para ver más detalles.
+              Explore more of my work below. Select a project card to learn more.
             </p>
           </section>
 

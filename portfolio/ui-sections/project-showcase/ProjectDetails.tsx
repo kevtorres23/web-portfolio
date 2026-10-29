@@ -38,7 +38,7 @@ export default function ProjectDetails(props: DetailsProps) {
               className="text-slate-950"
             />
             <h3 className="text-base font-semibold text-slate-900 tracking-tight">
-              Tecnologías
+              Technologies
             </h3>
           </div>
           <div className="flex flex-row flex-wrap gap-2">
@@ -56,7 +56,7 @@ export default function ProjectDetails(props: DetailsProps) {
               className="text-slate-950"
             />
             <h3 className="text-base font-semibold text-slate-900 tracking-tight">
-              Fecha
+              Date
             </h3>
           </div>
           <p className="text-slate-600 text-sm">{props.date}</p>
@@ -71,7 +71,7 @@ export default function ProjectDetails(props: DetailsProps) {
                 className="text-slate-950"
               />
               <h3 className="text-base font-semibold text-slate-900 tracking-tight">
-                Sitio web
+                Website
               </h3>
             </div>
             <Link href={props.website.url}>
@@ -90,7 +90,7 @@ export default function ProjectDetails(props: DetailsProps) {
               className="text-slate-950"
             />
             <h3 className="text-base font-semibold text-slate-900 tracking-tight">
-              Archivo de diseño
+              Design file
             </h3>
           </div>
           <Link href={props.design}>
@@ -108,21 +108,21 @@ export default function ProjectDetails(props: DetailsProps) {
       >
         <div className="flex flex-col gap-3">
           <h1 className="text-2xl font-semibold text-slate-900 tracking-tighter">
-            Descripción
+            Overview
           </h1>
           <p className="text-slate-600 w-full text-base">{props.longDesc}</p>
         </div>
 
         <div className="flex flex-col gap-3">
           <h1 className="text-2xl font-semibold text-slate-900 tracking-tighter">
-            Objetivo
+            Objective
           </h1>
           <p className="text-slate-600 w-full text-base">{props.objective}</p>
         </div>
 
         <div className="flex flex-col gap-3 text-sm">
           <h1 className="text-2xl font-semibold text-slate-900 tracking-tighter">
-            Resultados
+            Results
           </h1>
           <p className="text-slate-600 w-full text-base">{props.results}</p>
         </div>
