@@ -40,7 +40,7 @@ export const projectData: ProjectData[] = [
     imageUrl: "/project-images/rentapp-card-cover.png",
     roles: ["design", "fullstack"],
     stack: ["React", "Supabase", "PostgreSQL", "Stripe", "Node.js"],
-    date: "August 2026",
+    date: "October, 2026",
     website: {
       label: "View demo",
       url: "https://rentapp-demo-kevtorres23s-projects.vercel.app/owner/login",
@@ -65,7 +65,7 @@ export const projectData: ProjectData[] = [
     imageUrl: "/project-images/hemisferios-card-cover.png",
     roles: ["design", "fullstack"],
     stack: ["React", "Next.js", "MongoDB", "Node.js", "Express"],
-    date: "August 2026",
+    date: "April 2026",
     website: {
       label: "hemisferios-clinica.com",
       url: "https://hemisferios-clinica.com",
@@ -90,7 +90,7 @@ export const projectData: ProjectData[] = [
     imageUrl: "/project-images/correos-card-cover.png",
     roles: ["design"],
     stack: [],
-    date: "August 2026",
+    date: "September, 2025",
     website: {label: "", url: "none"},
     designFile:
       "https://www.figma.com/design/q0dZGu8RM46raNQwbibhbg/Correos-de-M%C3%A9xico?node-id=1-2498",
@@ -112,7 +112,7 @@ export const projectData: ProjectData[] = [
     imageUrl: "/project-images/aguamia-card-cover.png",
     roles: ["design", "fullstack"],
     stack: ["Next.js", "NestJS", "PostgreSQL", "Prisma"],
-    date: "August 2026",
+    date: "August, 2026",
     website: {
       label: "aguamia-purificadora.vercel.app",
       url: "https://aguamia-purificadora.vercel.app/",
@@ -137,7 +137,7 @@ export const projectData: ProjectData[] = [
     imageUrl: "/project-images/artex-card-cover.png",
     roles: ["design", "frontend"],
     stack: ["React", "Tailwind CSS", "Flowbite"],
-    date: "August 2026",
+    date: "September, 2024",
     website: {
       label: "artex-store.vercel.app",
       url: "https://artex-store.vercel.app/",
@@ -162,7 +162,7 @@ export const projectData: ProjectData[] = [
     imageUrl: "/project-images/sadasi-card-cover.png",
     roles: ["design", "frontend"],
     stack: ["React", "Tailwind CSS", "Shadcn/ui"],
-    date: "August 2026",
+    date: "April 2025",
     website: {label: "", url: "none"},
     designFile:
       "https://www.figma.com/design/6JO3OJXgGnX6Tgi01crKPW/Sadasi-Management-System?node-id=93-463",
