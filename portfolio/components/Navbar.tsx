@@ -22,7 +22,7 @@ export default function Navbar() {
       <nav className="gap-3 flex w-full flex-row justify-between items-center bg-white border border-slate-200 backdrop-blur-xs px-5 md:py-3 py-5 md:rounded-full rounded-none shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
         <Link
           href={"/"}
-          className="text-lg text-slate-900 font-semibold tracking-tighter"
+          className="text-lg text-slate-900 md:w-42 font-semibold tracking-tighter"
         >
           Kevin Torres
         </Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
 
         <div className="flex flex-row gap-3 items-center">
           <Link href="/Kevin Torres Urbina - CV.pdf" download>
-            <NormalButton>Download my resume</NormalButton>
+            <NormalButton>Download resume</NormalButton>
           </Link>
           <NavbarPopover />
         </div>
