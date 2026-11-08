@@ -70,17 +70,23 @@ function NavbarPopover() {
         <div className="flex flex-col items-start gap-0">
           <button className="flex flex-row gap-1.5 items-center">
             <FolderIcon size={18} className="text-slate-700" />
-            <NavbarLink text="My work" />
+            <Link href={"/#my-work"}>
+              <NavbarLink text="My work" />
+            </Link>
           </button>
 
           <button className="flex flex-row gap-1.5 items-center">
             <UserCircleIcon size={18} className="text-slate-700" />
-            <NavbarLink text="About me" />
+            <Link href={"/#about-me"}>
+              <NavbarLink text="About me" />
+            </Link>
           </button>
 
           <button className="flex flex-row gap-1.5 items-center">
             <ChatCircleDotsIcon size={18} className="text-slate-700" />
-            <NavbarLink text="Contact" />
+            <Link href={"/#contact"}>
+              <NavbarLink text="Contact" />
+            </Link>
           </button>
         </div>
       </PopoverContent>
